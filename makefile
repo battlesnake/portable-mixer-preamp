@@ -2,14 +2,14 @@ out:=out
 
 r:=$(wildcard *.r)
 
-targets:=$(r:%=%.pdf)
+targets:=$(patsubst %, $(out)/%, $(r:%=%.pdf))
 
 .PHONY: default clean
 
-default: $(targets:%=$(out)/%)
+default: $(targets)
 
 clean:
-	rm -rf -- $(out)
+	rm -rf -- $(targets)
 
 $(out):
 	mkdir -p -- $@

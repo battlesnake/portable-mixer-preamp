@@ -1,0 +1,310 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:mark
+LIBS:schematic-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 8
+Title "Four-channel preamplifier with mixer and two output channels"
+Date "8 jun 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L POT R1
+U 1 1 55757D4B
+P 7450 3650
+F 0 "R1" H 7450 3450 50  0000 C CNN
+F 1 "10k-LOG" H 7450 3550 50  0000 C CNN
+F 2 "" H 7450 3650 60  0000 C CNN
+F 3 "" H 7450 3650 60  0000 C CNN
+	1    7450 3650
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 55757D51
+P 7450 4000
+F 0 "#PWR01" H 7450 3750 50  0001 C CNN
+F 1 "GND" H 7450 3850 50  0000 C CNN
+F 2 "" H 7450 4000 60  0000 C CNN
+F 3 "" H 7450 4000 60  0000 C CNN
+	1    7450 4000
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 7700 3550 1300 200 
+U 557585B2
+F0 "Buffer 1" 50
+F1 "buffer.sch" 50
+F2 "BUFFER_OUT" I R 9000 3650 60 
+F3 "BUFFER_IN" I L 7700 3650 60 
+$EndSheet
+Wire Wire Line
+	7450 4000 7450 3900
+Wire Wire Line
+	7600 3650 7700 3650
+$Comp
+L SP3T S1
+U 1 1 55757B8F
+P 6150 2000
+F 0 "S1" H 6150 2150 50  0000 C CNN
+F 1 "ON/OFF/ON" H 6150 1800 50  0000 C CNN
+F 2 "" H 5525 2175 60  0000 C CNN
+F 3 "" H 5525 2175 60  0000 C CNN
+	1    6150 2000
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 4900 1900 750  200 
+U 55758894
+F0 "Preamp 1" 50
+F1 "preamp.sch" 50
+F2 "PREAMP_OUT" O R 5650 2000 60 
+$EndSheet
+Wire Wire Line
+	5850 2000 5650 2000
+NoConn ~ 6450 2000
+$Comp
+L SP3T S2
+U 1 1 55758E44
+P 6150 2500
+F 0 "S2" H 6150 2650 50  0000 C CNN
+F 1 "ON/OFF/ON" H 6150 2300 50  0000 C CNN
+F 2 "" H 5525 2675 60  0000 C CNN
+F 3 "" H 5525 2675 60  0000 C CNN
+	1    6150 2500
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 4900 2400 750  200 
+U 55758E47
+F0 "Preamp 2" 50
+F1 "preamp.sch" 50
+F2 "PREAMP_OUT" O R 5650 2500 60 
+$EndSheet
+Wire Wire Line
+	5850 2500 5650 2500
+NoConn ~ 6450 2500
+$Comp
+L SP3T S3
+U 1 1 55759A97
+P 7550 2000
+F 0 "S3" H 7550 2150 50  0000 C CNN
+F 1 "ON/OFF/ON" H 7550 1800 50  0000 C CNN
+F 2 "" H 6925 2175 60  0000 C CNN
+F 3 "" H 6925 2175 60  0000 C CNN
+	1    7550 2000
+	-1   0    0    -1  
+$EndComp
+$Sheet
+S 8050 1900 750  200 
+U 55759A9A
+F0 "Preamp 3" 50
+F1 "preamp.sch" 50
+F2 "PREAMP_OUT" O L 8050 2000 60 
+$EndSheet
+Wire Wire Line
+	7850 2000 8050 2000
+NoConn ~ 7250 2000
+$Comp
+L SP3T S4
+U 1 1 55759AA5
+P 7550 2500
+F 0 "S4" H 7550 2650 50  0000 C CNN
+F 1 "ON/OFF/ON" H 7550 2300 50  0000 C CNN
+F 2 "" H 6925 2675 60  0000 C CNN
+F 3 "" H 6925 2675 60  0000 C CNN
+	1    7550 2500
+	-1   0    0    -1  
+$EndComp
+$Sheet
+S 8050 2400 750  200 
+U 55759AA8
+F0 "Preamp 4" 50
+F1 "preamp.sch" 50
+F2 "PREAMP_OUT" O L 8050 2500 60 
+$EndSheet
+Wire Wire Line
+	7850 2500 8050 2500
+NoConn ~ 7250 2500
+$Comp
+L POT R2
+U 1 1 5575ACFF
+P 7450 4950
+F 0 "R2" H 7450 4750 50  0000 C CNN
+F 1 "10k-LOG" H 7450 4850 50  0000 C CNN
+F 2 "" H 7450 4950 60  0000 C CNN
+F 3 "" H 7450 4950 60  0000 C CNN
+	1    7450 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5575AD05
+P 7450 5300
+F 0 "#PWR02" H 7450 5050 50  0001 C CNN
+F 1 "GND" H 7450 5150 50  0000 C CNN
+F 2 "" H 7450 5300 60  0000 C CNN
+F 3 "" H 7450 5300 60  0000 C CNN
+	1    7450 5300
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 7700 4850 1300 200 
+U 5575AD0A
+F0 "Buffer 2" 50
+F1 "buffer.sch" 50
+F2 "BUFFER_OUT" I R 9000 4950 60 
+F3 "BUFFER_IN" I L 7700 4950 60 
+$EndSheet
+Wire Wire Line
+	7450 5300 7450 5200
+Wire Wire Line
+	7600 4950 7700 4950
+$Comp
+L JACK_TRS_6PINS J1
+U 1 1 5575D59B
+P 9900 3850
+F 0 "J1" H 9900 3550 50  0000 C CNN
+F 1 "STEREO JACK 3.5mm" H 9850 4250 50  0000 C CNN
+F 2 "" H 10000 3700 60  0000 C CNN
+F 3 "" H 10000 3700 60  0000 C CNN
+	1    9900 3850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9500 4050 9400 4050
+$Comp
+L GND #PWR03
+U 1 1 5575E484
+P 9400 4250
+F 0 "#PWR03" H 9400 4000 50  0001 C CNN
+F 1 "GND" H 9400 4100 50  0000 C CNN
+F 2 "" H 9400 4250 60  0000 C CNN
+F 3 "" H 9400 4250 60  0000 C CNN
+	1    9400 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9400 4050 9400 4250
+Wire Wire Line
+	9000 4950 9200 4950
+Wire Wire Line
+	9200 4950 9200 3850
+Wire Wire Line
+	9200 3850 9500 3850
+Wire Wire Line
+	9500 3650 9000 3650
+Text Notes 4950 5150 0    60   ~ 0
+S1-4 | Channel select\nR1-2 | Channel master volume
+$Sheet
+S 4900 3400 550  800 
+U 55758CAC
+F0 "Power supply" 50
+F1 "power.sch" 50
+F2 "0V" O R 5450 3800 60 
+F3 "+V" O R 5450 3500 60 
+F4 "-V" O R 5450 4100 60 
+$EndSheet
+$Comp
+L VSS #PWR04
+U 1 1 55759AC4
+P 5550 4100
+F 0 "#PWR04" H 5550 3950 50  0001 C CNN
+F 1 "VSS" H 5550 4250 50  0000 C CNN
+F 2 "" H 5550 4100 60  0000 C CNN
+F 3 "" H 5550 4100 60  0000 C CNN
+	1    5550 4100
+	0    1    1    0   
+$EndComp
+$Comp
+L VDD #PWR05
+U 1 1 55759B29
+P 5550 3500
+F 0 "#PWR05" H 5550 3350 50  0001 C CNN
+F 1 "VDD" H 5550 3650 50  0000 C CNN
+F 2 "" H 5550 3500 60  0000 C CNN
+F 3 "" H 5550 3500 60  0000 C CNN
+	1    5550 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 55759BAA
+P 5550 3800
+F 0 "#PWR06" H 5550 3550 50  0001 C CNN
+F 1 "GND" H 5550 3650 50  0000 C CNN
+F 2 "" H 5550 3800 60  0000 C CNN
+F 3 "" H 5550 3800 60  0000 C CNN
+	1    5550 3800
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5450 3500 5550 3500
+Wire Wire Line
+	5450 4100 5550 4100
+NoConn ~ 9500 3750
+NoConn ~ 9500 3950
+NoConn ~ 9500 4150
+Wire Wire Line
+	7450 3200 7450 3400
+Wire Wire Line
+	7450 4500 7450 4700
+Wire Wire Line
+	6450 1900 7250 1900
+Wire Wire Line
+	7050 1900 7050 3200
+Wire Wire Line
+	7050 3200 7450 3200
+Connection ~ 7050 2400
+Connection ~ 7050 1900
+Wire Wire Line
+	6450 2100 7250 2100
+Wire Wire Line
+	6650 2100 6650 4500
+Wire Wire Line
+	6450 2600 7250 2600
+Wire Wire Line
+	6650 4500 7450 4500
+Connection ~ 6650 2600
+Connection ~ 6650 2100
+Wire Wire Line
+	6450 2400 7250 2400
+Wire Wire Line
+	5550 3800 5450 3800
+$EndSCHEMATC

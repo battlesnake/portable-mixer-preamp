@@ -9,7 +9,7 @@ font.add.google("Open Sans", "opensans");
 
 f_res = 100;
 
-# Stringify SI values 
+# Stringify SI values
 label <- function(value, unit = "") f2si(signif(value, 2), unit);
 
 # Parameters
