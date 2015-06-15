@@ -35,7 +35,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 8
 Title "Four-channel preamplifier with mixer and two output channels"
-Date "8 jun 2015"
+Date "15 jun 2015"
 Rev ""
 Comp ""
 Comment1 ""
@@ -230,7 +230,7 @@ Wire Wire Line
 Wire Wire Line
 	9500 3650 9000 3650
 Text Notes 4950 5150 0    60   ~ 0
-S1-4 | Channel select\nR1-2 | Channel master volume
+Switches: Channel select\nPots: Channel master volume
 $Sheet
 S 4900 3400 550  800 
 U 55758CAC

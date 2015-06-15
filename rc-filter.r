@@ -89,8 +89,6 @@ grid$c <- apply(grid$z, c(1, 2), function (v) which(τ==v)[1]);
 colnames(grid$c) <- colnames(grid$z);
 rownames(grid$c) <- rownames(grid$z);
 
-print(grid$c);
-
 image(x=1:length(grid$x), y=1:length(grid$y), z=grid$c, col=colours,
 	axes=FALSE,
 	main="τ-value map",
