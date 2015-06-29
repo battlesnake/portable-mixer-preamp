@@ -1,7 +1,6 @@
 #pragma once
 #include "generator.h"
-
-#define APLAY "/usr/bin/aplay"
+#include "aplay.h"
 
 struct PARAMS {
 	unsigned int rate;
@@ -16,20 +15,11 @@ static char *waveforms[];
 
 int waveform_index(char *name);
 
-#define SAMPLE float
-#define TO_SAMPLE(x) ((SAMPLE) (x))
-#define SAMPLE_FORMAT "FLOAT_LE"
-
-#define BUFFER_LEN 1024
-#define BUFFER_SIZE (BUFFER_LEN * sizeof(SAMPLE))
-
 int main(int argc, char **argv);
 
 void show_help(char *);
 
 int get_params(int argc, char **argv, struct PARAMS *params);
-
-int alsaPlay(unsigned int rate, int (*callback)(), void *data);
 
 int generator_factory(
 	struct PARAMS *params,
