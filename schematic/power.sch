@@ -29,13 +29,14 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:mark
+LIBS:schematic-cache
 EELAYER 27 0
 EELAYER END
 $Descr User 8500 6500
 encoding utf-8
 Sheet 8 8
 Title "Power supply"
-Date "15 jun 2015"
+Date "29 jun 2015"
 Rev ""
 Comp ""
 Comment1 ""
