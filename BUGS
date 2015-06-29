@@ -1,0 +1,31 @@
+Problems
+
+ * Power rails are asymmetric (-0.7V, +5.3V instead of ±3.0V)
+
+ * Bad connection on Ch4 input from jack
+
+ * No output from test boost preamp on Ch4 (maybe due to previous issues)
+
+ * Move AC coupling capacitor to before input is forked to boost stage
+
+Improvements
+
+ * Increase AC coupling capacitors to 470nF
+
+ * Move output resistors to before output coupling capacitors
+
+ * Increase output coupling capacitors to 4.7μF
+
+To get
+
+ * Custom etched PCB
+
+ * Switches (no toggles)
+
+ * Pot knobs
+
+ * Case
+
+ * USB socket
+
+ * More capacitors (get kits from RapidOnline)

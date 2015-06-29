@@ -1,0 +1,7 @@
+#pragma once
+
+#define SQRT_2 1.41421356237309504880
+#define SQRT_3 1.73205080756887729352
+
+#define PI 3.14159265359
+#define PI2 (2 * PI)
