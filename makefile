@@ -6,7 +6,7 @@ targets:=$(patsubst %, $(out)/%, $(r:%=%.pdf))
 
 .PHONY: default clean kicad-stuff
 
-default: $(targets) kicad-stuff
+default: $(targets) kicad-stuff schematic/mark.lib
 
 kicad-stuff:
 	@rm -f -- schematic/*.bak
@@ -27,3 +27,7 @@ $(out)/%.r.pdf: %.r | $(out)
 		rm -f -- $@ \
 		exit 1 \
 	fi
+
+schematic/mark.lib: ../marks-kicad-library/mark.lib
+	@rm -f -- $@
+	@ln $< $@
