@@ -4,15 +4,26 @@ r:=$(wildcard *.r)
 
 targets:=$(patsubst %, $(out)/%, $(r:%=%.pdf))
 
-.PHONY: default clean
+.PHONY: default clean kicad-stuff
 
-default: $(targets)
+default: $(targets) kicad-stuff
+
+kicad-stuff:
+	@rm -f -- schematic/*.bak
+	@if [ -e schematic/schematic.pdf ]; then \
+		mv schematic/schematic.pdf out/; \
+	else \
+		echo "Do you need to re-render schematic.pdf in Kicad?"; \
+	fi
 
 clean:
-	rm -rf -- $(targets)
+	@rm -rf -- $(targets)
 
 $(out):
-	mkdir -p -- $@
+	@mkdir -p -- $@
 
 $(out)/%.r.pdf: %.r | $(out)
-	Rscript $< $@ || rm -f -- $@
+	@if ! Rscript $< $@; then \
+		rm -f -- $@ \
+		exit 1 \
+	fi
